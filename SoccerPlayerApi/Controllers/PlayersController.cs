@@ -15,11 +15,13 @@ namespace SoccerPlayerApi.Controllers
             _playerRepository = playerRepository;
         }
 
+
         [HttpGet("GetPlayers")]
         public async Task<IActionResult> GetPlayers()
         {
-            var players = await _playerRepository.GetPlayers();
-            return Ok(players);
+            var x = await _playerRepository.GetPlayers();
+
+            return Ok(x);
         }
 
         [HttpPost("Post")]

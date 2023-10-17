@@ -17,6 +17,7 @@ namespace SoccerPlayerApi.Models
         }
 
         public virtual DbSet<Player> Players { get; set; } = null!;
+        public virtual DbSet<Team> Teams { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -40,7 +41,25 @@ namespace SoccerPlayerApi.Models
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
                     .IsUnicode(false)
-                    .HasColumnName("name");
+                    .HasColumnName("playerName");
+
+                entity.Property(e => e.TeamId).HasColumnName("teamId");
+
+                entity.HasOne(d => d.Team)
+                    .WithMany(p => p.Players)
+                    .HasForeignKey(d => d.TeamId)
+                    .HasConstraintName("FK_Player_Team");
+            });
+
+            modelBuilder.Entity<Team>(entity =>
+            {
+                entity.ToTable("Team");
+
+                entity.Property(e => e.TeamId).HasColumnName("teamId");
+
+                entity.Property(e => e.TeamName)
+                    .HasMaxLength(50)
+                    .HasColumnName("teamName");
             });
 
             OnModelCreatingPartial(modelBuilder);
