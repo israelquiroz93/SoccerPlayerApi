@@ -8,9 +8,9 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  solution: '**/SoccerPlayer.sln'
-  project: '**/SoccerPlayer.csproj'
-  tests: '**/SoccerPlayerAPITests.csproj'
+  solution: '**/SoccerPlayerApi.sln'
+  project: '**/SoccerPlayerApi.csproj'
+  tests: '**/SoccerPlayerApiTests.csproj'
 
 
 steps:
