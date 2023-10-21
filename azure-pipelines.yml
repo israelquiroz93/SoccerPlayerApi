@@ -10,6 +10,7 @@ variables:
   buildConfiguration: 'Release'
   solution: '**/SoccerPlayer.sln'
   project: '**/SoccerPlayer.csproj'
+  tests: '**/SoccerPlayerAPITests.csproj'
 
 
 steps:
@@ -27,7 +28,7 @@ steps:
   name: 'UnitTest'
   inputs:
     command: 'test'
-    projects: '$(solution)'
+    projects: '$(tests)'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
