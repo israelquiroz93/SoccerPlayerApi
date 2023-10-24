@@ -1,0 +1,27 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+  - task: DownloadBuildArtifacts@1
+    name: 'DownloadArtifact'
+    inputs:
+      buildType: 'specific'
+      project: 'aec12af4-d458-4f29-808b-fbf305ca2b00'
+      pipeline: '4'
+      buildVersionToDownload: 'latest'
+      downloadType: 'specific'
+      downloadPath: '$(Build.ArtifactsDirectory)'
+      artifactName: 'soccerplayerartifact'
+  - task: AzureWebApp@1
+    name: 'PushToAzure'
+    inputs:
+      azureSubscription: 'Azure subscription 1(53ee3042-d92e-4074-a8b2-93cccf1b384b)'
+      appType: 'webApp'
+      appName: 'demosoccerplayerapp'
+      package: '$(Build.ArtifactsDirectory)'
+      deploymentMethod: 'auto'
