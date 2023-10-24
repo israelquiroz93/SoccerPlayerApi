@@ -19,7 +19,7 @@ namespace SoccerPlayerAPITests
         {
             //Arrange
             var activelist = new List<Player>() { CreateRandomPlayer(), CreateRandomPlayer(), CreateRandomPlayer() };
-
+            var faillist = new List<Player>() { CreateRandomPlayer()};
             _playerRepoMock.Setup(repo => repo.GetPlayers()).ReturnsAsync(activelist);
 
             var controller = new PlayersController(_playerRepoMock.Object);
