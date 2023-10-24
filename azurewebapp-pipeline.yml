@@ -23,5 +23,5 @@ steps:
       azureSubscription: 'Azure subscription 1(53ee3042-d92e-4074-a8b2-93cccf1b384b)'
       appType: 'webApp'
       appName: 'demosoccerplayerapp'
-      package: '$(Build.ArtifactsDirectory)'
+      package: '$(Build.ArtifactsDirectory)/soccerplayerartifact/*.zip'
       deploymentMethod: 'auto'
