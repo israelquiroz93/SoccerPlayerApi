@@ -43,7 +43,7 @@ steps:
     publishWebProjects: false
     projects: '$(project)'
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: false
+    zipAfterPublish: true
 
 - task: PublishBuildArtifacts@1
   name: 'publishArtifact'
