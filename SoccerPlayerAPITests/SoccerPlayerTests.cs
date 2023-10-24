@@ -32,7 +32,7 @@ namespace SoccerPlayerAPITests
 
             //Assert
             players.Value.Should().BeEquivalentTo(
-                faillist,
+                activelist,
                 options => options.ComparingByMembers<Player>()
             );
         }
