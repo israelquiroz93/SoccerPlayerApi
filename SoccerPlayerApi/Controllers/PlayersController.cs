@@ -16,7 +16,7 @@ namespace SoccerPlayerApi.Controllers
         }
 
 
-        [HttpGet("GetAllPlayers")]
+        [HttpGet("GetPlayers")]
         public async Task<IActionResult> GetPlayers()
         {
             var x = await _playerRepository.GetPlayers();
