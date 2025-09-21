@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoccerPlayerApi", "SoccerPlayerApi\SoccerPlayerApi.csproj", "{4B07767F-F7C9-4EF5-A0CC-5DBA0E0CF608}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoccerPlayerAPITests", "SoccerPlayerAPITests\SoccerPlayerAPITests.csproj", "{024D93D8-96AD-4101-B90C-62EA046D65A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoccerPlayerAPITests", "SoccerPlayerAPITests\SoccerPlayerAPITests.csproj", "{024D93D8-96AD-4101-B90C-62EA046D65A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoccerPlayerAPISUT", "SoccerPlayerAPISUT\SoccerPlayerAPISUT.csproj", "{FF42D1B0-103D-44A0-AC17-39027A8EC2F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{024D93D8-96AD-4101-B90C-62EA046D65A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{024D93D8-96AD-4101-B90C-62EA046D65A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{024D93D8-96AD-4101-B90C-62EA046D65A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF42D1B0-103D-44A0-AC17-39027A8EC2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF42D1B0-103D-44A0-AC17-39027A8EC2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF42D1B0-103D-44A0-AC17-39027A8EC2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF42D1B0-103D-44A0-AC17-39027A8EC2F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
